@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { FormProvider } from "./contexts/FormContext";
+import { Router } from "./router";
 
-function App() {
+export const App = () => {
+  useEffect(() => {
+    console.log("parou em 27:30 https://www.youtube.com/watch?v=W1Ed9TEMGJU");
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormProvider>
+      <Router />
+    </FormProvider>
   );
-}
+};
 
 export default App;
